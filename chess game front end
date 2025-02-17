@@ -1,0 +1,51 @@
+/* frontend/src/components/Board/ChessBoard.css */
+
+.chess-board {
+  display: flex;
+  flex-direction: column;
+  width: 560px;
+  height: 560px;
+  border: 2px solid #333;
+}
+
+.board-row {
+  display: flex;
+  flex: 1;
+}
+
+.chess-square {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.light-square {
+  background-color: #f0d9b5;
+}
+
+.dark-square {
+  background-color: #b58863;
+}
+
+.selected {
+  background-color: rgba(173, 216, 230, 0.5);
+}
+
+.possible-move::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.chess-piece {
+  width: 80%;
+  height: 80%;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+}
